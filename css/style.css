@@ -3739,7 +3739,7 @@ a.forum-item-title:hover {
   border: 7px solid transparent;
   border-right: 7px solid white;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .vertical-timeline-content h2 {
     font-size: 18px;
   }
@@ -4438,9 +4438,14 @@ body {
   color: #676a6c;
   overflow-x: hidden;
 }
+html {
+  height: 100%;
+}
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  position: relative;
+  min-width: 300px;
 }
 body.full-height-layout #wrapper,
 body.full-height-layout #page-wrapper {
@@ -4609,7 +4614,7 @@ video {
   flex-shrink: 1;
   width: calc(100% - 220px);
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   #page-wrapper {
     position: inherit;
   }
@@ -5753,11 +5758,6 @@ body.mini-navbar.fixed-sidebar .logo-element {
 }
 .loginscreen.middle-box {
   width: 300px;
-}
-.loginColumns {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 100px 20px 20px 20px;
 }
 .passwordBox {
   max-width: 460px;
@@ -8362,12 +8362,7 @@ body.landing-page {
   background-color: #1dc5a3;
   border-color: #1dc5a3;
 }
-@media (min-width: 768px) {
-  .landing-page {
-    /* Navbar positioning foo */
-    /* The navbar becomes detached from the top, so we round the corners */
-    /* Bump up size of carousel content */
-  }
+@media (min-width: 769px) {
   .landing-page .navbar-wrapper .container {
     padding-right: 0;
     padding-left: 0;
@@ -8394,7 +8389,7 @@ body.landing-page {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .landing-page .carousel-caption,
   .landing-page .carousel-caption.blank {
     top: 50px;
@@ -8465,7 +8460,7 @@ body.landing-page {
     margin-top: 120px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .landing-page .navbar .navbar-header {
     display: block;
     float: none;
@@ -9706,7 +9701,7 @@ body.md-skin {
   position: fixed;
   display: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   #page-wrapper {
     position: inherit;
     min-height: 100vh;
@@ -9719,6 +9714,10 @@ body.md-skin {
   .navbar-top-links .dropdown-tasks,
   .navbar-top-links .dropdown-alerts {
     margin-left: auto;
+  }
+  .landing-page.login .navbar-wrapper,
+  .landing-page.login .navbar-wrapper .navbar-lnr {
+    position: absolute;
   }
 }
 @media (max-width: 768px) {
@@ -9804,6 +9803,14 @@ body.md-skin {
   }
   .landing-page #footer.footer {
     height: 70px;
+  }
+  .landing-page.login .forms .background {
+    background: #FFFFFF;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    right: 0;
   }
 }
 @media (max-width: 350px) {
@@ -9892,7 +9899,6 @@ body.md-skin {
 
 .landing-page .container-fluid {
   width: 90%;
-  min-width: 270px;
 }
 
 .landing-page .product-main-price {
@@ -9913,9 +9919,10 @@ body.md-skin {
 
 .landing-page .pricing {
   margin-top: 18%;
+  padding-bottom: 25%;
 }
 
-.landing-page .i-checks {
+.landing-page .pricing .i-checks {
   pointer-events: none;
   padding: 10px 0 10px;
 }
@@ -9964,14 +9971,16 @@ body.md-skin {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: inherit;
   height: 40px;
   font-weight: 600;
   font-size: 13px;
   line-height: 18px;
   background: #2F4050;
-  margin-top: 25%;
   padding: 0;
+}
+
+.landing-page.login .footer {
+  margin-top: 0;
 }
 
 .landing-page .copyright {
@@ -9986,9 +9995,89 @@ body.md-skin {
 .landing-page .footer p {
   margin: 0;
   color: #FFFFFF;
+  font-size: 13px;
 }
 
 .landing-page .colm {
   -ms-flex: 0 0 280px;
   flex: 0 0 280px;
+}
+
+.login .forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+}
+
+.login .forms:not(.form-single) {
+  min-height: 850px;
+}
+
+.login .forms .form-control {
+  font-size: 13px;
+}
+
+.login .forms .background {
+  background: #F3F3F3;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.login .forms h2 {
+  padding-bottom: 20px;
+}
+
+.login .forms .form-group .i-checks label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.login .forms .form-group .i-checks .icheckbox_square-green {
+  padding-right: 15px;
+  margin-right: 15px;
+}
+.login .forms .form-group .i-checks label a {
+  color: #007bff;
+}
+
+.landing-page.login .btn-primary {
+  padding: 11px 0;
+}
+
+.landing-page.login .forgot {
+  margin-top: 35px;
+}
+
+.landing-page.login .forms p {
+  color: #676A6C;
+}
+
+.landing-page.login form.m-t {
+  padding-bottom: 20px;
+}
+
+.landing-page.login .form-group {
+  margin-bottom: 1.35rem;
 }
