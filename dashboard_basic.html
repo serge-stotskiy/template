@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNL Portal - Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- FooTable -->
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body class="dashboard">
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <img alt="image" class="" src="./img/logo2.png"/>
+                        <div class="nav-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="nav-txt font-bold"><i class="fa fa-usd" aria-hidden="true"></i><span>100.00</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-sm btn-primary" type="button">Top up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-area-chart"></i> <span class="nav-label">Number analysis</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">API analysis</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-pie-chart"></i> <span class="nav-label">SIP analysis</span> </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-label">Payments</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">My account</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="login.html">
+                            <span>Martin Strong</span><i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row white-bg">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <ul class="nav navbar-top-links white-bg">
+                    <div class="col-lg-12">
+                        <h2>Dashboard</h2>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Top–up & Plan</h5>
+                        </div>
+                        <div class="ibox-content custom-content">
+                            <p>$20 minimum refill amount according to your plan.</p>
+                            <form id="form" action="#">
+                                <div class="row no-margins">
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <span class="group-btn text-muted">$</span>
+                                            <input class="refill btn-left col-10" type="text" value="">
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-top btn-primary" type="button">Top up</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="ibox-custom-footer">
+                                <div class="border-bottom border-custom"></div>
+                                <div class="div-text">
+                                    <div class="min-width-plan">Current plan:</div>
+                                    <div class="font-bold text-success"><a href="#">Basic, $0.01 / per
+                                        number</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox second">
+                        <div class="ibox-title">
+                            <div class="">
+                                <span class="float-right">
+                                    <a data-toggle="dropdown" href="#">
+                                        <span class="text-muted text-xs block">this week <b
+                                                class="caret"></b></span>
+                                    </a>
+                                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                        <li><a class="dropdown-item" href="#">last 7 months</a></li>
+                                        <li><a class="dropdown-item" href="#">last 8 months</a></li>
+                                        <li><a class="dropdown-item" href="#">last 9 months</a></li>
+                                    </ul>
+                                </span>
+                            </div>
+                            <h5>Quick statistics</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-md-4 analytic-block">
+                                    <p class="font-bold">Your visits to the site</p>
+                                    <div class="analytic-text">
+                                        <div class="h-1">4</div>
+                                        <div class="font-bold text-danger">-44% <i
+                                                class="fa fa-level-down"></i> <small>this week</small></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 analytic-block">
+                                    <p class="font-bold">Total analysis</p>
+                                    <div class="analytic-text">
+                                        <div class="h-1">36</div>
+                                        <div class="font-bold text-navy">+2% <i class="fa fa-level-up"></i> <small>this week</small></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 analytic-block">
+                                    <p class="font-bold">Quantity of phone numbers</p>
+                                    <div class="analytic-text">
+                                        <div class="h-1">10500</div>
+                                        <div class="font-bold text-danger">-16% <i
+                                                class="fa fa-level-down"></i> <small>this week</small></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ibox-custom-footer">
+                                <div class="border-bottom border-custom"></div>
+                                <div class="div-text">
+                                    <div class="min-width-plan"><span class="font-bold"> General trend:</span> Compared to last week, you have been less active during the current.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 third">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Latest news</h5>
+                            <div class="ibox-tools">
+                                <a href="#">
+                                    Show all news
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="font-bold">Temporary price drop</div>
+                            <div>The administrator has reduced the cost of analysis
+                                per number during the holiday season for everyone.
+                                The action will last till 02/10/2021. The new price
+                                is twice the old price for you, start saving now.
+                            </div>
+                            <div class="ibox-data text-muted">
+                                <small>Yesterday 5:42 pm – 02.02.2021</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox chart-settings">
+                        <div class="ibox-content">
+                            <div>
+                                <span class="float-right text-right chart-dropdown">
+                                    <a data-toggle="dropdown" href="#">
+                                        <span class="text-muted text-xs block">last 6 months <b class="caret"></b></span>
+                                    </a>
+                                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                        <li><a class="dropdown-item" href="#">last 7 months</a></li>
+                                        <li><a class="dropdown-item" href="#">last 8 months</a></li>
+                                        <li><a class="dropdown-item" href="#">last 9 months</a></li>
+                                    </ul>
+                                </span>
+                                <h3 class="font-bold no-margins">
+                                    Detailed statistics
+                                </h3>
+                                <div class="border-bottom border-custom"></div>
+                            </div>
+                            <div class="m-t-sm">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div>
+                                            <canvas id="lineChart" height="350"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <ul class="stat-list progress-list">
+                                            <li>
+                                                <h2 class="no-margins">259</h2>
+                                                <span class="text">Total analysis in period</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" style="width: 48%;"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h2 class="no-margins ">156 000</h2>
+                                                <span class="text">Total numbers in period</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar" style="width: 60%;"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h2 class="no-margins ">126</h2>
+                                                <span class="text">Total analysis in similar past period</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar progress-bar-custom" style="width: 30%;"></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h2 class="no-margins ">73 000</h2>
+                                                <span class="text">Total numbers in similar past period</span>
+                                                <div class="progress progress-mini">
+                                                    <div class="progress-bar progress-bar-custom" style="width: 38%;"></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="ibox table">
+                            <div class="ibox-title">
+                                <h5>History of payments</h5>
+                                <div class="ibox-tools">
+                                    <a href="#">
+                                        Show all payments
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover dataTables-example" >
+                                        <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Result</th>
+                                            <th>Type of payment</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>07.26.2020</td>
+                                            <td><i class="fa fa-file-text f-table"></i>072620_1000.xls</td>
+                                            <td><i class="fa fa-file-text-o f-table"></i>Invoice bill</td>
+                                            <td>$ 75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>07.26.2020</td>
+                                            <td class="center">-</tdv>
+                                            <td>Top up</td>
+                                            <td>$ 300</td>
+                                        </tr>
+                                        <tr>
+                                            <td>07.26.2020</td>
+                                            <td class="center">-</td>
+                                            <td>Top up</td>
+                                            <td>$ 200</td>
+                                        </tr>
+                                        </tbody>
+                                        <tfoot>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                Terms and Conditions of Service
+            </div>
+            <div>
+                <strong>Copyright</strong> LNR Portal © 2021
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- ChartJS-->
+<script src="js/plugins/chartJs/Chart.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.dataTables-example').dataTable({searching: false, paging: false, info: false,
+            responsive: true,
+        });
+        Chart.Legend.prototype.afterFit = function() {
+            this.height = this.height + 20;
+        };
+        var lineData = {
+            labels: ["December", "January", "February", "March", "April", "May"],
+            datasets: [
+                {
+                    label: "Selected period",
+                    backgroundColor: "rgba(165,223,211,1)",
+                    borderColor: "rgba(26,179,148,0.7)",
+                    pointBackgroundColor: "rgba(26,179,148,1)",
+                    pointBorderColor: "#fff",
+                    pointRadius: 4,
+                    data: [150, 200, 250, 100, 150, 250],
+                    borderWidth: 0,
+                },
+                {
+                    label: "Selected period",
+                    backgroundColor: "rgba(241,241,241,1)",
+                    borderColor: "rgba(220,220,220,1)",
+                    pointBackgroundColor: "rgba(220,220,220,1)",
+                    pointBorderColor: "#fff",
+                    pointRadius: 4,
+                    data: [50, 100, 50, 150, 100, 25],
+                    borderWidth: 0,
+                }
+            ]
+        };
+        var lineOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: "top",
+                align: "start"
+            },
+        }
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        new Chart(ctx, {type: 'line', data: lineData, options: lineOptions});
+    });
+</script>
+</body>
+</html>

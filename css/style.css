@@ -4438,6 +4438,10 @@ body {
   color: #676a6c;
   overflow-x: hidden;
 }
+body.dashboard {
+  font-size: 13px;
+}
+
 html {
   height: 100%;
 }
@@ -10080,4 +10084,195 @@ body.md-skin {
 
 .landing-page.login .form-group {
   margin-bottom: 1.35rem;
+}
+
+.dashboard .nav.navbar-top-links.navbar-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+  padding: 0 15px;
+}
+
+.dashboard .nav.navbar-top-links.navbar-right a span{
+  padding-right: 20px;
+}
+
+.dashboard .nav.navbar-top-links.navbar-right a i {
+  font-size: 15px;
+}
+
+.dashboard .nav.navbar-top-links.white-bg {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 65px;
+}
+
+.dashboard .nav.navbar-top-links.white-bg h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.dashboard .nav .nav-content {
+  padding-top: 30px;
+}
+
+.dashboard .nav .nav-content .row{
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dashboard .nav .nav-content .nav-txt {
+text-align: right;
+  font-size: 18px;
+}
+
+.chart-dropdown ul {
+  min-width: auto;
+}
+
+.chart-settings h3 {
+  padding-bottom: 15px;
+}
+
+.border-custom {
+  width: calc(100% - 30px);
+  position: absolute;
+  left: 15px;
+}
+
+.progress-bar.progress-bar-custom {
+  background-color: #676A6C;
+}
+
+.progress-list h2 {
+  font-size: 30px;
+}
+
+.progress-list span.text {
+  font-size: 13px;
+}
+
+.group-btn, .refill {
+  border: 1px solid #E5E6E7;
+  height: 34px;
+}
+.group-btn {
+  width: 36px;
+  position: absolute;
+  left: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.refill {
+  outline: none;
+}
+
+.btn-left {
+  margin-left: 36px;
+}
+
+.btn-top {
+  padding: 0;
+  height: 34px;
+  width: 100%;
+  min-width: 50px;
+  margin: 0;
+}
+
+.ibox-custom-footer {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.ibox-custom-footer .div-text{
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.custom-content {
+  font-size: 13px;
+}
+
+.ibox.second .ibox-title{
+  padding: 15px 15px 8px 15px;
+}
+
+.ibox.second .ibox-title .dropdown-menu {
+  min-width: auto;
+}
+
+.h-1 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #676A6C;
+}
+
+.analytic-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.analytic-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.third .ibox .ibox-title .ibox-tools a,
+.table.ibox .ibox-title .ibox-tools a {
+  color: #007bff !important;
+}
+
+.third .ibox-content {
+  padding: 15px;
+}
+
+.third .ibox-content div{
+  padding-bottom: 5px;
+}
+
+.second .ibox-custom-footer {
+  margin-top: 8px;
+}
+.footable > thead > tr > th > span.footable-sort-indicator:before {
+  content: "\e00f";
+}
+
+.f-table {
+  color: #2C8F7B;
+  margin-right: 8px;
 }
