@@ -18,7 +18,7 @@
     <link href="css/style.css" rel="stylesheet">
 
 </head>
-<body class="dashboard">
+<body class="dashboard banned">
 <div id="wrapper">
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
@@ -29,11 +29,11 @@
                         <div class="nav-content">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="nav-txt font-bold"><i class="fa fa-usd" aria-hidden="true"></i><span>100.00</span>
+                                    <div class="nav-txt font-bold nav-pay"><i class="fa fa-usd" aria-hidden="true"></i><span>0</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <button class="btn btn-sm btn-primary" type="button">Top up</button>
+                                    <button class="btn btn-sm btn-primary btn-blocked" type="button">Top up</button>
                                 </div>
                             </div>
                         </div>
@@ -88,36 +88,19 @@
         <div class="wrapper wrapper-content">
             <div class="row">
                 <div class="col-xl-3">
-                    <div class="ibox ">
+                    <div class="ibox ibox-banned">
                         <div class="ibox-title">
-                            <h5>Top–up & Plan</h5>
+                            <h5>Your account was banned</h5>
                             <div class="ibox-tools warning">
                                 <i class="fa fa-exclamation-triangle"></i>
                             </div>
                         </div>
                         <div class="ibox-content custom-content">
-                            <p>$20 minimum refill amount according to your plan.</p>
-                            <form id="form" action="#">
-                                <div class="row no-margins">
-                                    <div class="col-8">
-                                        <div class="row">
-                                            <span class="group-btn text-muted">$</span>
-                                            <input class="refill btn-left col-10" type="text" value="20">
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <button class="btn btn-top btn-primary" type="button">Top up</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="ibox-custom-footer">
-                                <div class="border-bottom border-custom"></div>
-                                <div class="div-text">
-                                    <div class="min-width-plan">Current plan:</div>
-                                    <div class="font-bold text-success"><a href="#">Basic, $0.01 / per
-                                        number</a></div>
-                                </div>
-                            </div>
+                            <p class="custom-margin-bottom"> We're sorry, but your account has been banned
+                                by the administration.</p>
+                            <p class="custom-margin-bottom"> If you do not agree with the administration's decision, contact us by mail:
+                                <a href= "mailto:lnrportal@lnrportal.com">lnrportal@lnrportal.com</a></p>
+                            <p class="custom-margin-bottom"> Thank you for your interest, LNR Portal.</p>
                         </div>
                     </div>
                 </div>

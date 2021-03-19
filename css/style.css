@@ -10276,3 +10276,47 @@ text-align: right;
   color: #2C8F7B;
   margin-right: 8px;
 }
+
+.dashboard input {
+  color: #676A6C;
+  padding-left: 10px;
+}
+
+.dashboard .warning {
+  display: none;
+}
+
+.dashboard .warning {
+  display: none;
+}
+
+.need-pay .warning {
+  display: block;
+}
+
+.need-pay .warning i, .warning-pay {
+  color: #ED5565;
+}
+
+.dashboard .nav .nav-content .nav-txt.nav-pay {
+  text-align: left;
+}
+
+.btn-blocked {
+  background: #ABABAB;
+  color: #FFFFFF;
+  pointer-events: none;
+}
+
+.custom-margin-bottom {
+  margin-bottom: 10px;
+}
+
+.dashboard .ibox {
+  border-top: 3px solid #E7EAEC;
+  box-sizing: border-box;
+}
+
+.dashboard .ibox.ibox-banned {
+  border-top: 3px solid #ED5565;
+}
