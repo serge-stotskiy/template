@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNL Portal - Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Table -->
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body class="dashboard payments">
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <img alt="image" class="" src="./img/logo2.png"/>
+                        <div class="nav-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="nav-txt font-bold"><i class="fa fa-usd" aria-hidden="true"></i><span>100.00</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-sm btn-primary" type="button">Top up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-area-chart"></i> <span class="nav-label">Number analysis</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">API analysis</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-pie-chart"></i> <span class="nav-label">SIP analysis</span> </a>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-label">Payments</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">My account</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="login.html">
+                            <span>Martin Strong</span><i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row white-bg">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <ul class="nav navbar-top-links white-bg">
+                    <div class="col-lg-12">
+                        <h2>Payments</h2>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-xl-3">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Top–up account</h5>
+                            <div class="ibox-tools warning">
+                                <i class="fa fa-exclamation-triangle"></i>
+                            </div>
+                        </div>
+                        <div class="ibox-content custom-content">
+                            <p>$25 minimum refill amount according to your plan.</p>
+                            <form id="form" action="#">
+                                <div class="row no-margins">
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <span class="group-btn text-muted">$</span>
+                                            <input class="refill btn-left col-10" type="text" value="25">
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-top btn-primary" type="button">Top up</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="ibox-custom-footer">
+                                <div class="border-bottom border-custom"></div>
+                                <div class="div-text">
+                                    <div class="min-width-plan">Current plan:</div>
+                                    <div class="font-bold text-success"><a href="#">Pre–payd, $0.00005 / per number</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight no-padding">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="ibox table">
+                            <div class="ibox-title">
+                                <h5>History of payments</h5>
+                                <div class="ibox-tools">
+                                    <a href="#">
+                                        Show all payments
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-hover dataTables-example display" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Amount</th>
+                                            <th>Type of payment</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="dt-more-container wrapper-content no-padding">
+                                        <a id="btn-example-load-more" style="display:none" href="javascript:void(0);">Showing 50 more items</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                Terms and Conditions of Service
+            </div>
+            <div>
+                <strong>Copyright</strong> LNR Portal © 2021
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+<script src="js/plugins/dataTables/dataTables.pageLoadMore.min.js"></script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!--Show-more button plugin
+https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
+
+<!-- ChartJS-->
+<script src="js/plugins/chartJs/Chart.min.js"></script>
+
+<script>
+    $(document).ready(function (){
+        var table = $('.dataTables-example').DataTable({
+            searching: false,
+            info: false,
+            responsive: true,
+            dom: 'frt',
+            ajax: 'db/arrays.json',
+            drawCallback: function(){
+                // If there is some more data
+                if($('#btn-example-load-more').is(':visible')){
+                    // Scroll to the "Load more" button
+                    $('html, body').animate({
+                        scrollTop: $('#btn-example-load-more').offset().top
+                    }, 1000);
+                }
+
+                // Show or hide "Load more" button based on whether there is more data available
+                $('#btn-example-load-more').toggle(this.api().page.hasMore());
+            }
+        });
+
+        // Handle click on "Load more" button
+        $('#btn-example-load-more').on('click', function(){
+            // Load more data
+            table.page.loadMore();
+        });
+    });
+</script>
+</body>
+</html>

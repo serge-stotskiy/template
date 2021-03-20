@@ -10320,3 +10320,7 @@ text-align: right;
 .dashboard .ibox.ibox-banned {
   border-top: 3px solid #ED5565;
 }
+
+.dashboard.payments .dataTables_wrapper {
+  padding-bottom: 10px;
+}
