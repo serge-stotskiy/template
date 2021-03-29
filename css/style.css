@@ -4972,7 +4972,7 @@ code {
 .ibox-content {
   background-color: #ffffff;
   color: inherit;
-  padding: 15px 20px 20px 20px;
+  padding: 15px 25px 25px 25px;
   border-color: #e7eaec;
   border-image: none;
   border-style: solid;
@@ -10323,4 +10323,439 @@ text-align: right;
 
 .dashboard.payments .dataTables_wrapper {
   padding-bottom: 10px;
+}
+
+.buttons-excel {
+  background: #C2C2C2;
+  border: none;
+}
+
+.custom-calendar {
+  float: left;
+  padding: 0;
+}
+
+.custom-calendar .input-group-addon {
+  border-width: 1px;
+}
+
+.bulk th .icheckbox_square-green.checked {
+  background-position: -240px 0;
+}
+
+@media not all, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  .bulk th .icheckbox_square-green.checked {
+    background-position: -220px 0;
+  }
+}
+
+.dropzone .upload {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.dropzone .text-message {
+  font-size: 13px;
+}
+
+
+.bulk .dropzone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 140px;
+}
+
+.btn-bulk {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 10px;
+  border: none;
+}
+
+.bulk .panel-body,
+.bulk .panel-body .ibox,
+.bulk .panel-body .ibox .ibox-content {
+  border: none;
+}
+
+.bulk .panel-body .ibox {
+  margin: 0;
+}
+
+.bulk .panel-body {
+  padding: 0;
+}
+
+.dropzone {
+  position: relative;
+}
+
+.upload-message {
+  min-height: 140px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+
+.message-success {
+  background: #1AB394;
+}
+
+.message-error {
+  background: #ED5565;
+  padding: 0 80px;
+}
+
+.upload-message .upload,
+.upload-message .text-message{
+  color: #FFFFFF;
+}
+
+.upload-message.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.bulk .ibox-content .i-checks {
+  margin-bottom: 20px;
+  width: 20%;
+  min-width: 125px;
+}
+
+.bulk .ibox-content .i-checks span {
+  padding-left: 9px;
+}
+
+.bulk sup.tooltip-message {
+  font-size: 100%;
+  color: #D3CFC8;
+}
+
+.no-margin {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.tooltip-message {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  position: absolute;
+  left: 20px;
+  top: -5px;
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #555 transparent transparent;
+}
+
+.tooltip-message:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bulk .ibox-content .i-checks span sup:hover {
+  color: inherit;
+}
+
+.text-margin {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.bulk .text-top{
+  margin-top: 1.2rem;
+}
+
+.input-daterange.input-group {
+  margin-left: 8px;
+}
+
+.html5buttons {
+  display: none;
+}
+
+.message-generated {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  padding: 5% 10%;
+}
+
+.message-generated .text-message {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+
+}
+
+.round-icon {
+  font-size: 40px;
+  width: 80px;
+  height: 80px;
+  background: #1AB394;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.excelExport {
+  margin-top: 25px;
+  width: 135px;
+}
+
+.message-generated h3 {
+  color: #000000;
+  font-size: 18px;
+}
+
+/*
+Spinner animation
+ */
+@keyframes spinner-container {
+  0% {
+    transform: rotate(0)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.spinner-container div {
+  box-sizing: border-box !important
+}
+
+.spinner-container > div {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 14px;
+  left: 14px;
+  border-radius: 50%;
+  border: 8px solid #000;
+  border-color: #1ab394 transparent #1ab394 transparent;
+  animation: spinner-container 2s linear infinite;
+}
+
+.spinner-container > div:nth-child(2), .spinner-container > div:nth-child(4) {
+  width: 54px;
+  height: 54px;
+  top: 23px;
+  left: 23px;
+  animation: spinner-container 2s linear infinite reverse;
+}
+
+.spinner-container > div:nth-child(2) {
+  border-color: transparent #cdd5e3 transparent #cdd5e3
+}
+
+.spinner-container > div:nth-child(3) {
+  border-color: transparent
+}
+
+.spinner-container > div:nth-child(3) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+
+.spinner-container > div:nth-child(3) div:before, .spinner-container > div:nth-child(3) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 24px;
+  background: #1ab394;
+  border-radius: 50%;
+  box-shadow: 0 64px 0 0 #1ab394;
+}
+
+.spinner-container > div:nth-child(3) div:after {
+  left: -8px;
+  top: 24px;
+  box-shadow: 64px 0 0 0 #1ab394;
+}
+
+.spinner-container > div:nth-child(4) {
+  border-color: transparent;
+}
+
+.spinner-container > div:nth-child(4) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+
+.spinner-container > div:nth-child(4) div:before, .spinner-container > div:nth-child(4) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 15px;
+  background: #cdd5e3;
+  border-radius: 50%;
+  box-shadow: 0 46px 0 0 #cdd5e3;
+}
+
+.spinner-container > div:nth-child(4) div:after {
+  left: -8px;
+  top: 15px;
+  box-shadow: 46px 0 0 0 #cdd5e3;
+}
+
+.spinner-double-ring {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+}
+
+.spinner-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+
+.spinner-container div {
+  box-sizing: content-box;
+}
+/* ---- */
+
+.spinner-text {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  color: #676A6C;
+}
+
+.message-generated.spinner {
+  padding: 0;
+  height: 260px;
+}
+
+.iti__flag {
+  background-image: url("../img/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../img/flags@2x.png");
+  }
+}
+
+#error-msg {
+  color: #ED5565;
+  margin-top: 15px;
+  display: block;
+}
+
+#error-msg.hide {
+  display: none;
+}
+
+.iti.iti--allow-dropdown {
+  width: 100%;
+}
+
+.iti__selected-flag {
+  border: none;
+  outline: none;
+  padding: 0 6px 0 30px;
+}
+
+.iti--allow-dropdown .phone.form-control {
+  font-size: 15px;
+  border: 1px solid #E5E6E7;
+  outline: none;
+  padding: 30px 12px;
+  padding-left: 70px;
+}
+
+.ibox.ibox-padding .ibox-content {
+  padding: 50px 25px 25px 25px;
+}
+
+.ibox.ibox-padding .text-margin {
+  margin-top: 0;
+}
+
+.bulk .form-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }

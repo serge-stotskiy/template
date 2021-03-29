@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNL Portal - Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/plugins/dropzone/basic.css" rel="stylesheet">
+    <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
+    <link href="css/plugins/intl-tel-input/intlTelInput.css" rel="stylesheet">
+    <!-- Table -->
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body class="dashboard payments bulk">
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <img alt="image" class="" src="./img/logo2.png"/>
+                        <div class="nav-content">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="nav-txt font-bold"><i class="fa fa-usd" aria-hidden="true"></i><span>100.00</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <button class="btn btn-sm btn-primary" type="button">Top up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-area-chart"></i> <span class="nav-label">Number analysis</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">API analysis</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-pie-chart"></i> <span class="nav-label">SIP analysis</span> </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-credit-card"></i> <span class="nav-label">Payments</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">My account</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="login.html">
+                            <span>Martin Strong</span><i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row white-bg">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <ul class="nav navbar-top-links white-bg">
+                    <div class="col-lg-12">
+                        <h2>Number Analysis</h2>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-12">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li><a class="nav-link active" data-toggle="tab" href="#tab-1"> Bulk analysis</a></li>
+                            <li><a class="nav-link" data-toggle="tab" href="#tab-2">Analysis by number</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <div class="ibox">
+                                        <div class="ibox-content">
+                                            <div class="row">
+                                                <div class="col-xl-4">
+                                                    <form action="#" class="dropzone" id="dropzoneForm">
+                                                        <div class="fallback">
+                                                            <input name="file" type="file" multiple/>
+                                                        </div>
+                                                        <div class="dz-default message-success upload-message">
+                                                            <span><div class="fa fa-thumbs-up upload"></div>
+                                                                <div class="text-message">File: mybasephone.xlsx upload and correct!</div>
+                                                            </span>
+                                                        </div>
+                                                        <div class="dz-default message-error upload-message">
+                                                            <span><div class="fa fa-upload upload"></div>
+                                                                <div class="text-message">File: mybasephone.xlsx upload and not correct!</div>
+                                                            </span>
+                                                        </div>
+                                                    </form>
+                                                    <a class="btn btn-primary btn-block btn-bulk btn-blocked" href="#">Analysis!</a>
+                                                </div>
+                                                <div class="col-xl-8">
+                                                    <div class="text-margin">
+                                                        Select options to analyse
+                                                    </div>
+                                                    <div class="row no-margin check-boxes">
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>NPA–NXX
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox" checked>
+                                                                <span>Block
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox" checked>
+                                                                <span>Rate Centre
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>Region
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>Switch
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>OCN
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>LATA
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>LIR
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>Disc date
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox" checked>
+                                                                <span>Eff date
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-top">
+                                                        File for upload should meet requirements.                                                                     <sup class="tooltip-message">
+                                                        <i class="fa fa-question-circle"></i>
+                                                        <span class="tooltiptext">Text</span>
+                                                    </sup> The number of phone numbers in one file is unlimited.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <div class="ibox ibox-padding">
+                                        <div class="ibox-content">
+                                            <div class="row">
+                                                <div class="col-xl-4 form-phone">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <input type="tel" id="phone" class="phone form-control">
+                                                            <div id="error-msg" class="hide">Wrong phone number format</div>
+                                                        </div>
+                                                    </form>
+                                                    <a class="btn btn-primary btn-block btn-bulk btn-blocked" href="#">Analysis!</a>
+                                                </div>
+                                                <div class="col-xl-8">
+                                                    <div class="text-margin">
+                                                        Select options to analyse
+                                                    </div>
+                                                    <div class="row no-margin check-boxes">
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>NPA–NXX
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox" checked>
+                                                                <span>Block
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox" checked>
+                                                                <span>Rate Centre
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>Region
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>Switch
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>OCN
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>LATA
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>LIR
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox">
+                                                                <span>Disc date
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="i-checks">
+                                                            <label> <input type="checkbox" checked>
+                                                                <span>Eff date
+                                                                    <sup class="tooltip-message">
+                                                                        <i class="fa fa-question-circle"></i>
+                                                                        <span class="tooltiptext">Text</span>
+                                                                    </sup>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-top">
+                                                        Analysis is possible for American and Canadian mobile number formats.<br/>
+                                                        Not all parameters are available for Canadian numbers.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight no-padding">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-12">
+                        <div class="ibox table">
+                            <div class="ibox-title">
+                                <h5>Analysis history</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="table-responsive">
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 custom-calendar" id="data_5">
+                                        <div class="input-daterange input-group" id="datepicker">
+                                            <input type="text" class="form-control-sm form-control" name="start" value="07/26/2020"/>
+                                            <span class="input-group-addon">to</span>
+                                            <input type="text" class="form-control-sm form-control" name="end" value="08/26/2020" /><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="float-right">
+                                        <a class="btn btn-primary btn-block btn-blocked" href="#" data-toggle="modal" data-target="#myModal1">Export into single file</a>
+                                    </div>
+                                    <table class="table table-striped table-hover dataTables-example display" cellspacing="0" width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th><input type="checkbox" class="i-checks" name="input[]"></th>
+                                            <th>Date</th>
+                                            <th>Starts from</th>
+                                            <th>Quantity</th>
+                                            <th>Cost,Number/Amount</th>
+                                            <th>Result</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="dt-more-container wrapper-content no-padding">
+                                        <a id="btn-example-load-more" style="display:none" href="javascript:void(0);">Showing 50 more items</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal inmodal" id="myModal1" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content animated fadeIn">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <div class="message-generated">
+                            <div class="round-icon">
+                                <span class="fa fa-thumbs-up upload"></span>
+                            </div>
+                            <h3 class="font-bold">File generated!</h3>
+                            <div class="text-message">Download the result by clicking on the link below.
+                                The result has also been added to your test history table.
+                                Thank you for being with us.
+                            </div>
+                            <a class="btn btn-primary btn-block excelExport" href="#">Download file</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content animated fadeIn">
+                    <div class="modal-body">
+                        <div class="message-generated spinner">
+                            <div class="spinner-double-ring">
+                                <div class="spinner-container">
+                                    <div></div>
+                                    <div></div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                    <div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="spinner-text">Please wait for the process to finish, it will not take long.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                Terms and Conditions of Service
+            </div>
+            <div>
+                <strong>Copyright</strong> LNR Portal © 2021
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+<script src="js/plugins/dataTables/dataTables.pageLoadMore.min.js"></script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!--Show-more button plugin
+https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
+
+<!-- Date range use moment.js same as full calendar plugin -->
+<script src="js/plugins/fullcalendar/moment.min.js"></script>
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+<!-- Date range use moment.js same as full calendar plugin -->
+<script src="js/plugins/fullcalendar/moment.min.js"></script>
+
+<!-- Date range picker -->
+<script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+
+<!-- ChartJS-->
+<script src="js/plugins/chartJs/Chart.min.js"></script>
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+
+<!-- DROPZONE -->
+<script src="js/plugins/dropzone/dropzone.js"></script>
+
+<script src="js/plugins/intl-tel-input/intlTelInput.min.js"></script>
+<script src="js/plugins/intl-tel-input/utils.js"></script>
+
+<script>
+    Dropzone.autoDiscover = false;
+    $(document).ready(function (){
+        var input = document.querySelector("#phone");
+        var errorMsg = document.querySelector("#error-msg");
+        var iti = window.intlTelInput(input, {
+            utilsScript: 'js/plugins/intl-tel-input/utils.js',
+            customPlaceholder:function(selectedCountryPlaceholder,selectedCountryData){
+                return '+'+selectedCountryData.dialCode+' '+selectedCountryPlaceholder.replace(/[0-9]/g,'_');
+            },
+        });
+        var reset = function () {
+            errorMsg.classList.add('hide');
+        }
+
+        input.addEventListener('blur', function () {
+            reset();
+            if (input.value.trim()) {
+                if (!iti.isValidNumber()) {
+                    errorMsg.classList.remove('hide')
+                }
+            }
+        })
+
+        input.addEventListener('change', reset);
+        input.addEventListener('keyup', reset);
+
+        /*$('#myModal2').modal('show');*/
+
+        var myDropzone = new Dropzone("#dropzoneForm", {
+            dictDefaultMessage: "<div class=\"fa fa-upload upload\"></div><div class=\"text-message\">Upload XLSX, XLSM, XLTX file or drop here</div>"
+        });
+
+        myDropzone.on("success", function(file) {
+            file.previewElement.parentNode.removeChild(file.previewElement);
+            $('.message-success').addClass('active');
+            $('.btn-bulk').removeClass('btn-blocked');
+        });
+
+        myDropzone.on("error", function(file) {
+            file.previewElement.parentNode.removeChild(file.previewElement);
+            $('.message-error').addClass('active');
+        });
+
+        $(".excelExport").on("click", function() {
+            $(".buttons-excel").trigger("click");
+        });
+
+        $('#data_5 .input-daterange').datepicker({
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+
+        $('input[name="daterange"]').daterangepicker();
+
+        $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+        $('#reportrange').daterangepicker({
+            format: 'MM/DD/YYYY',
+            startDate: moment().subtract(29, 'days'),
+            endDate: moment(),
+            minDate: '01/01/2012',
+            maxDate: '12/31/2015',
+            dateLimit: { days: 60 },
+            showDropdowns: true,
+            showWeekNumbers: true,
+            timePicker: false,
+            timePickerIncrement: 1,
+            timePicker12Hour: true,
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            opens: 'right',
+            drops: 'down',
+            buttonClasses: ['btn', 'btn-sm'],
+            applyClass: 'btn-primary',
+            cancelClass: 'btn-default',
+            separator: ' to ',
+            locale: {
+                applyLabel: 'Submit',
+                cancelLabel: 'Cancel',
+                fromLabel: 'From',
+                toLabel: 'To',
+                customRangeLabel: 'Custom',
+                daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                firstDay: 1
+            }
+        }, function(start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        });
+
+
+        var table = $('.dataTables-example').DataTable({
+            searching: false,
+            info: false,
+            responsive: true,
+            dom: '<"html5buttons"B>',
+            buttons: [
+                {
+                    extend: 'excel',
+                    text: 'Export into single file',
+                },
+            ],
+            ajax: 'db/arrays_bulk.json',
+            columnDefs: [ {
+                targets: 0,
+                data: null,
+                className: 'text-left',
+                searchable: false,
+                orderable: false,
+                render: function (data, type, full, meta) {
+                    if (data[0] === "1") {
+                        return '<input type="checkbox" checked class="i-checks" name="input[]">';
+                    }
+                    return '<input type="checkbox" class="i-checks" name="input[]">';
+                },
+            } ],
+            drawCallback: function(){
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                });
+                // If there is some more data
+                if($('#btn-example-load-more').is(':visible')){
+                    // Scroll to the "Load more" button
+                    $('html, body').animate({
+                        scrollTop: $('#btn-example-load-more').offset().top
+                    }, 1000);
+                }
+
+                // Show or hide "Load more" button based on whether there is more data available
+                $('#btn-example-load-more').toggle(this.api().page.hasMore());
+            },
+            "initComplete": function(settings, json) {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                });
+            }
+        });
+
+        // Handle click on "Load more" button
+        $('#btn-example-load-more').on('click', function(){
+            // Load more data
+            table.page.loadMore();
+        });
+    });
+</script>
+</body>
+</html>
