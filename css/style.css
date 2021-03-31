@@ -8463,6 +8463,14 @@ body.landing-page {
   .landing-page .featurette-heading {
     margin-top: 120px;
   }
+
+  .wrapper-content {
+    padding: 25px 55px;
+  }
+
+  .news .ibox-content {
+    padding: 50px;
+  }
 }
 @media (max-width: 767px) {
   .landing-page .navbar .navbar-header {
@@ -10758,4 +10766,20 @@ Spinner animation
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+.news .ibox-content h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #2F4050;
+  margin-bottom: 40px;
+}
+
+.news .ibox-data {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 6px;
+  margin-top: 16px;
 }
