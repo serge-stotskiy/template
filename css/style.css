@@ -4961,7 +4961,7 @@ code {
   border-width: 1px;
   color: inherit;
   margin-bottom: 0;
-  padding: 15px 90px 8px 15px;
+  padding: 15px 90px 8px 25px;
   min-height: 48px;
   position: relative;
   clear: both;
@@ -8485,6 +8485,17 @@ body.landing-page {
   .landing-page .nav.navbar-right {
     flex-direction: column;
   }
+  .custom-calendar {
+    float: none !important;
+  }
+
+  .export-file {
+    float: none !important;
+  }
+
+  .input-daterange.input-group {
+    padding-left: 0 !important;
+  }
 }
 .landing-page .navbar-toggle {
   color: #ddd;
@@ -9824,6 +9835,15 @@ body.md-skin {
     top: 0;
     right: 0;
   }
+  .admin .navbar-header .nav.navbar-top-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .admin .navbar-header .breadcrumb {
+    width: 100%;
+    margin: 17px 5px 5px 8px;
+  }
 }
 @media (max-width: 350px) {
   .timeline-item .date {
@@ -10102,7 +10122,7 @@ body.md-skin {
   -ms-flex-align: end;
   -ms-grid-row-align: flex-end;
   align-items: flex-end;
-  padding: 0 15px;
+  padding: 0 15px 0 0;
 }
 
 .dashboard .nav.navbar-top-links.navbar-right a span{
@@ -10340,7 +10360,7 @@ text-align: right;
 
 .custom-calendar {
   float: left;
-  padding: 0;
+  padding: 0 0 10px 0;
 }
 
 .custom-calendar .input-group-addon {
@@ -10389,9 +10409,9 @@ text-align: right;
   border: none;
 }
 
-.bulk .panel-body,
-.bulk .panel-body .ibox,
-.bulk .panel-body .ibox .ibox-content {
+.bulk:not(.admin) .panel-body,
+.bulk:not(.admin) .panel-body .ibox,
+.bulk:not(.admin) .panel-body .ibox .ibox-content {
   border: none;
 }
 
@@ -10512,7 +10532,7 @@ text-align: right;
 }
 
 .input-daterange.input-group {
-  margin-left: 8px;
+  padding-left: 8px;
 }
 
 .html5buttons {
@@ -10782,4 +10802,33 @@ Spinner animation
   text-align: center;
   margin-bottom: 6px;
   margin-top: 16px;
+}
+
+.admin .nav-header {
+  padding-bottom: 90px;
+}
+
+.admin .nav.nav-tabs {
+  margin-bottom: 20px;
+}
+
+.setting-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0056B3;
+}
+
+.banned {
+  color: #ED5565;
+}
+
+.admin .breadcrumb {
+  float: left;
+  padding: 4px 12px;
+  margin: 17px 5px 5px 0;
+  background-color: transparent;
+}
+
+.admin .navbar-header {
+  width: 100%;
 }
