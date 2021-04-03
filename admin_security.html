@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNL Portal - Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+
+    <!-- Table -->
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body class="dashboard payments bulk admin">
+<div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <img alt="image" class="" src="./img/logo2.png"/>
+                    </div>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">All clients</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-label">News</span></a>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">Security</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <strong>Security</strong>
+                        </li>
+                    </ol>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a href="login.html">
+                                <span>Admin</span><i class="fa fa-sign-out"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row white-bg">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <ul class="nav navbar-top-links white-bg">
+                    <div class="col-lg-12">
+                        <h2>Security</h2>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-xl-6 col-lg-10">
+                    <div class="ibox">
+                        <div class="ibox-title">
+                            <h5>Personal data</h5>
+                        </div>
+                        <div class="ibox-content custom-content">
+                            <form>
+                                <div class="form-group row">
+                                    <label class="col-lg-5 col-form-label">Email adress:</label>
+                                    <div class="col-lg-7">
+                                        <input type="email" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="hr-line-custom"></div>
+                                <div class="form-group row">
+                                    <label class="col-lg-5 col-form-label">Password:</label>
+                                    <div class="col-lg-7">
+                                        <input type="password" placeholder="Password"
+                                                                  class="form-control">
+                                    </div>
+                                    <div class="offset-lg-5 col-lg-7 password">
+                                        <input type="password" placeholder="Password"
+                                               class="form-control password-input" value="abCd_ffYU33_21b">
+                                        <a href="#" class="password-control"></a>
+                                    </div>
+                                    <div class="offset-lg-5 col-lg-7 password">
+                                        <input type="text" placeholder="Password"
+                                               class="form-control password-input =" value="abCd_ffYU33_21b">
+                                        <a href="#" class="password-control view"></a>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-xl-5 col-lg-4">
+                                        <button class="btn btn-custom btn-primary" type="submit">Update data</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="float-right">
+                Terms and Conditions of Service
+            </div>
+            <div>
+                <strong>Copyright</strong> LNR Portal © 2021
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/plugins/dataTables/datatables.min.js"></script>
+<script src="js/plugins/dataTables/dataTables.pageLoadMore.min.js"></script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+<!--Show-more button plugin
+https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
+
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('body').on('click', '.password-control', function(e){
+            var $passwordInput = $(e.currentTarget.previousElementSibling);
+            if ($passwordInput.attr('type') === 'password'){
+                $(this).addClass('view');
+                $passwordInput.attr('type', 'text');
+            } else {
+                $(this).removeClass('view');
+                $passwordInput.attr('type', 'password');
+            }
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

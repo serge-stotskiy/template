@@ -4972,7 +4972,7 @@ code {
 .ibox-content {
   background-color: #ffffff;
   color: inherit;
-  padding: 15px 25px 25px 25px;
+  padding: 20px 25px 25px 25px;
   border-color: #e7eaec;
   border-image: none;
   border-style: solid;
@@ -8465,7 +8465,7 @@ body.landing-page {
   }
 
   .wrapper-content {
-    padding: 25px 55px;
+    padding: 25px 40px;
   }
 
   .news .ibox-content {
@@ -10818,7 +10818,7 @@ Spinner animation
   color: #0056B3;
 }
 
-.banned {
+.admin .banned {
   color: #ED5565;
 }
 
@@ -10831,4 +10831,39 @@ Spinner animation
 
 .admin .navbar-header {
   width: 100%;
+}
+
+.btn-custom {
+  width: 100%;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.password {
+  position: relative;
+  margin-top: 20px;
+}
+
+.password-control {
+  position: absolute;
+  top: 12px;
+  right: 25px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/view.svg) 0 0 no-repeat;
+}
+.password-control.view {
+  background: url(../img/no-view.svg) 0 0 no-repeat;
+  background-position-y: -2px;
+}
+
+.hr-line-custom {
+  border-top: 1px solid #e7eaec;
+  color: #ffffff;
+  background-color: #ffffff;
+  height: 1px;
+  margin: 20px -25px;
 }
