@@ -8226,7 +8226,7 @@ body.landing-page {
   height: 88px;
   width: 88px;
 }
-.landing-page .pricing-plan {
+.landing-page .pricing-plan, .settings .pricing-plan {
   background: #FFFFFF;
   border: 1px solid #E7EAEC;
   border-top: 3px solid #E7EAEC;
@@ -8236,7 +8236,7 @@ body.landing-page {
   transform: scale(1.1);
   background: #f4f4f4;
 }
-.landing-page .pricing-plan li {
+.landing-page .pricing-plan li, .settings .pricing-plan li {
   padding: 20px 16px;
   border-top: 1px solid #e7eaec;
 }
@@ -8326,7 +8326,8 @@ body.landing-page {
 .landing-page .btn-danger.btn-outline:hover {
   color: #fff;
 }
-.landing-page .btn-primary {
+.landing-page .btn-primary,
+.settings .pricing-plan .btn-primary {
   background-color: #1ab394;
   border-color: #1ab394;
   color: #FFFFFF;
@@ -9917,12 +9918,24 @@ body.md-skin {
   padding: 0;
 }
 
-.landing-page .product-detail .product-main-price span {
+.landing-page .product-detail .product-main-price span,
+.settings .product-detail .product-main-price span {
   font-size: 36px;
 }
 
 .landing-page .product-detail .product-main-price small {
   font-size: 15px;
+}
+
+.settings .product-detail .product-main-price span {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.settings .product-main-price small {
+  font-size: 13px;
 }
 
 .carousel-caption.container-fluid .p-0 {
@@ -9933,7 +9946,8 @@ body.md-skin {
   width: 90%;
 }
 
-.landing-page .product-main-price {
+.landing-page .product-main-price,
+.settings .product-main-price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9945,7 +9959,9 @@ body.md-skin {
   justify-content: space-between;
 }
 
-.landing-page .product-detail .btn-xs {
+.landing-page .product-detail .btn-xs,
+.settings .product-detail .btn-xs,
+.btn-full-width {
   width: 100%;
 }
 
@@ -9954,28 +9970,40 @@ body.md-skin {
   padding-bottom: 25%;
 }
 
-.landing-page .pricing .i-checks {
+.landing-page .pricing .i-checks,
+.settings .product-detail .i-checks{
   pointer-events: none;
   padding: 10px 0 10px;
 }
 
-.landing-page .i-checks:last-child {
+.settings .product-detail .no-check {
+  pointer-events: none;
+  padding: 15px 0 15px;
+}
+
+.landing-page .i-checks:last-child,
+.settings .pricing-plan .i-checks:last-child {
   padding-bottom: 0;
 }
 
-.landing-page .i-checks:first-child {
+.landing-page .i-checks:first-child,
+.settings .pricing-plan .i-checks:first-child,
+.settings .product-detail .no-check {
   padding-top: 0;
 }
 
-.landing-page .i-checks .iradio_square-green {
+.landing-page .i-checks .iradio_square-green,
+.settings .pricing-plan .i-checks .iradio_square-green {
   margin-right: 10px;
 }
 
-.landing-page .pricing h1 {
+.landing-page .pricing h1,
+.settings .product-detail h1 {
   font-weight: bold;
 }
 
-.landing-page .m-t-md {
+.landing-page .m-t-md,
+.settings .pricing-plan .m-t-md{
   margin: 0;
 }
 
@@ -9985,7 +10013,21 @@ body.md-skin {
   color: #676A6C;
 }
 
-.landing-page .pricing-plan .m-b-xs {
+.settings .pricing-plan .small.text-muted {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #676A6C;
+}
+
+.settings .pricing-plan h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.landing-page .pricing-plan .m-b-xs,
+.settings .pricing-plan .m-b-xs{
   margin-top: 0;
 }
 
@@ -10147,6 +10189,7 @@ body.md-skin {
 .dashboard .nav.navbar-top-links.white-bg h2 {
   margin: 0;
   font-size: 26px;
+  color: #000000;
 }
 
 .dashboard .nav .nav-content {
@@ -10160,8 +10203,9 @@ body.md-skin {
 }
 
 .dashboard .nav .nav-content .nav-txt {
-text-align: right;
+  text-align: right;
   font-size: 18px;
+  color: #A2ACBD;
 }
 
 .chart-dropdown ul {
@@ -10818,7 +10862,9 @@ Spinner animation
   color: #0056B3;
 }
 
-.admin .banned {
+.admin .banned,
+.msg-user.banned,
+.msg-user.banned a{
   color: #ED5565;
 }
 
@@ -10866,4 +10912,182 @@ Spinner animation
   background-color: #ffffff;
   height: 1px;
   margin: 20px -25px;
+}
+
+.padding-top {
+  padding: 25px 0 0 0;
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+  .ibox.product-detail {
+    width: 772px;
+  }
+  .settings-form {
+    min-width: 900px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1920px) {
+  .admin .ibox.table-history, .admin .ibox.plan {
+    min-width: 505px;
+  }
+}
+
+.settings .no-check .font-bold {
+  font-size: 15px;
+}
+
+.h2-settings {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+  margin-top: 0;
+}
+
+.settings .ibox.product-detail{
+  margin-bottom: 0;
+}
+
+.settings .ibox.product-detail {
+  border: none;
+}
+
+.btn–payd {
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.btn–payd.btn-banish{
+  color: inherit;
+}
+
+.btn-banish {
+  background: #FFFFFF;
+  border: 1px solid #E5E6E7;
+  color: #CCCCCC;
+  pointer-events: none;
+}
+
+.btn-active {
+  background: #E7EAEC;
+}
+
+.btn–payd.btn-active {
+  border: 1px solid #A2ACBD;
+}
+
+.text-list ul {
+  margin: 0;
+  padding: 0;
+}
+
+.text-list ul li {
+  list-style: none;
+  line-height: 20px;
+}
+
+.h4-list {
+  font-size: 13px;
+}
+
+.admin .label-success,
+.admin .label-danger {
+  font-size: 13px;
+}
+
+.btn-status {
+  padding: 0 8px;
+  width: 60px;
+}
+
+.plan .hr-line-custom {
+  margin: 0 -25px 15px;
+}
+
+.plan .ibox-content {
+  padding: 20px 25px 0 25px;
+}
+
+.btns {
+  margin-bottom: 1rem;
+}
+
+.admin .touchspin {
+  text-align: center;
+}
+
+.banish {
+  pointer-events: none;
+}
+
+.banish .bootstrap-touchspin,
+.form-phone .banish{
+  opacity: 0.6;
+}
+
+.btn.banish {
+  opacity: 0.8;
+  background: #C2C2C2;
+}
+
+.btn-banish.banish {
+  opacity: 0.8;
+  background: #FFFFFF;
+  border: 1px solid #E5E6E7;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.fa-level-down.right {
+  transform: rotate(270deg);
+}
+
+.text-danger .new-user {
+  color: #1ab394 !important;
+}
+
+.msg-user {
+  display: none;
+}
+
+.new .msg-user {
+  display: block;
+  margin-top: 15px;
+}
+
+td.details-control {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+td.details-control:before {
+  content: "\f105";
+}
+
+.shown td.details-control {
+  transform: rotate(90deg);
+}
+
+.sorting-none:after,
+.sorting-none:before,
+.sorting:after,
+.sorting_asc:after,
+.sorting_desc:after,
+.sorting-none.sorting_asc:before,
+.sorting-none.sorting_desc:before{
+  content: '' !important;
+}
+
+.sorting:before, .sorting_asc:before {
+  content: "\f107" !important;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.sorting_desc:before {
+  content: "\f106" !important;
+  font: normal normal normal 14px/1 FontAwesome;
 }

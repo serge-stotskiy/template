@@ -369,7 +369,7 @@
                     borderWidth: 0,
                 },
                 {
-                    label: "Selected period",
+                    label: "Similar past period",
                     backgroundColor: "rgba(241,241,241,1)",
                     borderColor: "rgba(220,220,220,1)",
                     pointBackgroundColor: "rgba(220,220,220,1)",
@@ -387,6 +387,24 @@
                 position: "top",
                 align: "start"
             },
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            suggestedMax: 300,
+                            suggestedMin: 0
+                        }
+                    }
+                ],
+                xAxes: [
+                    {
+                        ticks: {
+                            suggestedMax: 300,
+                            suggestedMin: 0
+                        }
+                    }
+                ]
+            }
         }
         var ctx = document.getElementById("lineChart").getContext("2d");
         new Chart(ctx, {type: 'line', data: lineData, options: lineOptions});
