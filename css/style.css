@@ -2795,7 +2795,8 @@ select.form-control:not([size]):not([multiple]) {
 .input-s-lg {
   width: 250px;
 }
-.i-checks {
+.i-checks,
+.i-check {
   padding-left: 0;
 }
 .form-control,
@@ -4489,6 +4490,9 @@ a:focus {
 }
 .border-bottom {
   border-bottom: 1px solid #e7eaec !important;
+}
+.dashed-bottom {
+  border-bottom: 1px dashed #e7eaec !important;
 }
 .font-bold {
   font-weight: bold;
@@ -9971,7 +9975,9 @@ body.md-skin {
 }
 
 .landing-page .pricing .i-checks,
-.settings .product-detail .i-checks{
+.settings .product-detail .i-checks,
+.landing-page .pricing .i-check,
+.settings .product-detail .i-check {
   pointer-events: none;
   padding: 10px 0 10px;
 }
@@ -9982,18 +9988,24 @@ body.md-skin {
 }
 
 .landing-page .i-checks:last-child,
-.settings .pricing-plan .i-checks:last-child {
+.settings .pricing-plan .i-checks:last-child,
+.landing-page .i-check:last-child,
+.settings .pricing-plan .i-check:last-child {
   padding-bottom: 0;
 }
 
 .landing-page .i-checks:first-child,
 .settings .pricing-plan .i-checks:first-child,
+.landing-page .i-check:first-child,
+.settings .pricing-plan .i-check:first-child,
 .settings .product-detail .no-check {
   padding-top: 0;
 }
 
 .landing-page .i-checks .iradio_square-green,
-.settings .pricing-plan .i-checks .iradio_square-green {
+.settings .pricing-plan .i-checks .iradio_square-green,
+.landing-page .i-check .iradio_square-green,
+.settings .pricing-plan .i-check .iradio_square-green{
   margin-right: 10px;
 }
 
@@ -10118,7 +10130,8 @@ body.md-skin {
   padding-bottom: 20px;
 }
 
-.login .forms .form-group .i-checks label {
+.login .forms .form-group .i-checks,
+.login .forms .form-group .i-check label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10128,11 +10141,14 @@ body.md-skin {
   margin-bottom: 0;
 }
 
-.login .forms .form-group .i-checks .icheckbox_square-green {
+.login .forms .form-group .i-checks .icheckbox_square-green,
+.login .forms .form-group .i-check .icheckbox_square-green {
   padding-right: 15px;
   margin-right: 15px;
 }
-.login .forms .form-group .i-checks label a {
+
+.login .forms .form-group .i-checks label a,
+.login .forms .form-group .i-check label a {
   color: #007bff;
 }
 
@@ -10206,6 +10222,7 @@ body.md-skin {
   text-align: right;
   font-size: 18px;
   color: #A2ACBD;
+  white-space: nowrap;
 }
 
 .chart-dropdown ul {
@@ -10508,13 +10525,15 @@ body.md-skin {
   justify-content: center;
 }
 
-.bulk .ibox-content .i-checks {
+.bulk .ibox-content .i-checks,
+.bulk .ibox-content .i-check {
   margin-bottom: 20px;
   width: 20%;
   min-width: 125px;
 }
 
-.bulk .ibox-content .i-checks span {
+.bulk .ibox-content .i-checks span,
+.bulk .ibox-content .i-check span {
   padding-left: 9px;
 }
 
@@ -10562,7 +10581,8 @@ body.md-skin {
   opacity: 1;
 }
 
-.bulk .ibox-content .i-checks span sup:hover {
+.bulk .ibox-content .i-checks span sup:hover,
+.bulk .ibox-content .i-check span sup:hover {
   color: inherit;
 }
 
@@ -10789,7 +10809,7 @@ Spinner animation
   display: block;
 }
 
-#error-msg.hide {
+#error-msg.hide, .hide {
   display: none;
 }
 
@@ -10958,22 +10978,22 @@ Spinner animation
   border-radius: 3px;
 }
 
-.btn–payd.btn-banish{
+.btn–payd.btn-active{
   color: inherit;
 }
 
-.btn-banish {
+.btn-active {
   background: #FFFFFF;
   border: 1px solid #E5E6E7;
   color: #CCCCCC;
   pointer-events: none;
 }
 
-.btn-active {
+.btn-banish {
   background: #E7EAEC;
 }
 
-.btn–payd.btn-active {
+.btn–payd.btn-banish {
   border: 1px solid #A2ACBD;
 }
 
@@ -11047,6 +11067,10 @@ Spinner animation
   color: #1ab394 !important;
 }
 
+.text-danger small {
+  color: #1ab394 !important;
+}
+
 .msg-user {
   display: none;
 }
@@ -11090,4 +11114,35 @@ td.details-control:before {
 .sorting_desc:before {
   content: "\f106" !important;
   font: normal normal normal 14px/1 FontAwesome;
+}
+
+.nav-content .fa-usd {
+  padding-right: 5px;
+}
+
+.btn-plus {
+  height: 34px;
+  width: 54px;
+}
+
+.btn-plus .fa {
+  font-size: 22px;
+}
+
+.ibox-title.last-news {
+  padding: 15px 90px 8px 15px;
+}
+
+.dashboard.dont-need-pay .ibox.second .ibox-custom-footer,
+.dashboard.banned .ibox.second .ibox-custom-footer {
+  margin-top: 28px;
+}
+
+.dashboard .third .ibox .ibox-content {
+  padding-bottom: 24px;
+}
+
+.dashboard.dont-need-pay .third .ibox .ibox-content,
+.dashboard.banned .third .ibox .ibox-content {
+  padding-bottom: 44px;
 }
