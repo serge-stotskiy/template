@@ -9982,7 +9982,7 @@ body.md-skin {
   padding: 10px 0 10px;
 }
 
-.settings .product-detail .no-check {
+.product-detail .no-check {
   pointer-events: none;
   padding: 15px 0 15px;
 }
@@ -10525,8 +10525,8 @@ body.md-skin {
   justify-content: center;
 }
 
-.bulk .ibox-content .i-checks,
-.bulk .ibox-content .i-check {
+.bulk .ibox-content > div:not(.table-responsive) .i-checks,
+.bulk .ibox-content > div:not(.table-responsive) .i-check {
   margin-bottom: 20px;
   width: 20%;
   min-width: 125px;
@@ -10618,7 +10618,7 @@ body.md-skin {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  padding: 5% 10%;
+  padding: 7%;
 }
 
 .message-generated .text-message {
@@ -10939,7 +10939,7 @@ Spinner animation
 }
 
 @media (min-width: 1201px) and (max-width: 1920px) {
-  .ibox.product-detail {
+  body:not(.landing-page) .ibox.product-detail {
     width: 772px;
   }
   .settings-form {
@@ -10953,7 +10953,7 @@ Spinner animation
   }
 }
 
-.settings .no-check .font-bold {
+.no-check .font-bold {
   font-size: 15px;
 }
 
@@ -11080,7 +11080,7 @@ Spinner animation
   margin-top: 15px;
 }
 
-td.details-control {
+div.details-control {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -11088,12 +11088,9 @@ td.details-control {
   -webkit-font-smoothing: antialiased;
 }
 
-td.details-control:before {
+div.details-control:before {
   content: "\f105";
-}
-
-.shown td.details-control {
-  transform: rotate(90deg);
+  padding: 8px;
 }
 
 .sorting-none:after,
@@ -11145,4 +11142,43 @@ td.details-control:before {
 .dashboard.dont-need-pay .third .ibox .ibox-content,
 .dashboard.banned .third .ibox .ibox-content {
   padding-bottom: 44px;
+}
+
+.landing-page .no-check {
+  padding: 0 0 17px;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details>li:first-child {
+  padding-top: 0;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details>li {
+  border-bottom: 1px solid #efefef;
+  padding: 0.5em 0;
+}
+
+table.dataTable>tbody>tr.child span.dtr-title {
+  display: inline-block;
+  min-width: 75px;
+  font-weight: bold;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details>li {
+  border-bottom: 1px solid #efefef;
+  padding: 0.5em 0;
+}
+
+table.dataTable>tbody>tr.child ul.dtr-details>li:last-child {
+  border-bottom: none;
+}
+
+table tbody tr.parent div.details-control {
+  transform: rotate(90deg);
 }

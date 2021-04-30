@@ -359,6 +359,7 @@
             var table = $('.dataTables-example').DataTable({
                 pageLength: 10,
                 searching: false,
+            stateSave: true,
                 info: false,
                 responsive: true,
                 dom: 'frt',
@@ -369,7 +370,7 @@
 
 
             var $loadMore = $('.load-more');
-            if (table.page.info().recordsTotal < table.page.info().length) {
+            if (table.page.info() && (table.page.info().recordsTotal < table.page.info().length)) {
                 $loadMore.addClass('hide');
             }
 

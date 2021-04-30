@@ -292,7 +292,7 @@
                                         <tr>
                                             <td>07.26.2020</td>
                                             <td><i class="fa fa-file-text f-table"></i>072620_1000.xls</td>
-                                            <td><i class="fa fa-file-text-o f-table"></i>Invoice bill</td>
+                                            <td><i class="fa fa-file-text f-table"></i>Invoice bill</td>
                                             <td>$ 75</td>
                                         </tr>
                                         <tr>
@@ -348,7 +348,8 @@
 
 <script>
     $(document).ready(function () {
-        $('.dataTables-example').dataTable({searching: false, paging: false, info: false,
+        $('.dataTables-example').dataTable({searching: false,
+            stateSave: true, paging: false, info: false,
             responsive: true,
         });
         Chart.Legend.prototype.afterFit = function() {
