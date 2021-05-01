@@ -397,28 +397,14 @@
                                            cellspacing="0" width="100%">
                                         <thead>
                                         <tr>
+                                            <th></th>
                                             <th>Date</th>
                                             <th>Type</th>
                                             <th>Quantity</th>
                                             <th>Cost,Number/Amount</th>
                                             <th>Status/Result</th>
-                                            <th class="none">Age</th>
-                                            <th class="none">Start date</th>
-                                            <th class="none">Salary</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td><div class="details-control"></div>07.26.2020</td>
-                                            <td>Number</td>
-                                            <td>1</td>
-                                            <td>$ 0.07</td>
-                                            <td><i class="fa fa-check text-navy"></i></td>
-                                            <td>Number</td>
-                                            <td>1</td>
-                                            <td>$ 0.07</td>
-                                        </tr>
-                                        </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -490,6 +476,7 @@
 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="js/plugins/dataTables/datatables.min.js"></script>
+<script src="js/plugins/dataTables/dataTables.pageLoadMore.min.js"></script>
 <script src="js/plugins/dataTables/dataTables.responsive.min.js"></script>
 <!-- Custom and plugin javascript -->
 <script src="js/inspinia.js"></script>
@@ -625,12 +612,62 @@
             checkboxClass: 'icheckbox_square-green',
         });
 
+        /* Formatting function for row details - modify as you need */
+        function format(d) {
+            // `d` is the original data object for the row
+            return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+                '<tr>' +
+                '<td>Full name:</td>' +
+                '<td>' + d.name + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>Extension number:</td>' +
+                '<td>' + d.position + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                '<td>Extra info:</td>' +
+                '<td>' + d.salary + '</td>' +
+                '</tr>' +
+                '</table>';
+        }
+
+
         var table = $('.dataTables-example').DataTable({
             searching: false,
-            stateSave: true,
             info: false,
             responsive: true,
             dom: '<"html5buttons"B>',
+            ajax: 'db/arrays_new_user.json',
+            "columns": [
+                {
+                    "className": 'details-control',
+                    "orderable": false,
+                    "data": null,
+                    "defaultContent": ''
+                },
+                {"data": "date"},
+                {"data": "type"},
+                {"data": "quantity"},
+                {"data": "cost"},
+                {"data": "status"}
+            ],
+            "order": [[1, 'asc']]
+        });
+
+        // Add event listener for opening and closing details
+        $('.dataTables-example tbody').on('click', 'td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var row = table.row(tr);
+
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format(row.data())).show();
+                tr.addClass('shown');
+            }
         });
     });
 </script>

@@ -320,6 +320,7 @@
 <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="js/plugins/dataTables/datatables.min.js"></script>
+<script src="js/plugins/dataTables/dataTables.pageLoadMore.min.js"></script>
 <!-- Custom and plugin javascript -->
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
@@ -332,8 +333,7 @@
 
 <script>
     $(document).ready(function () {
-        $('.dataTables-example').dataTable({searching: false,
-            stateSave: true, paging: false, info: false,
+        $('.dataTables-example').dataTable({searching: false, paging: false, info: false,
             responsive: true,
         });
         Chart.Legend.prototype.afterFit = function() {

@@ -11080,7 +11080,8 @@ Spinner animation
   margin-top: 15px;
 }
 
-div.details-control {
+div.details-control,
+td.details-control {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -11088,8 +11089,12 @@ div.details-control {
   -webkit-font-smoothing: antialiased;
 }
 
-div.details-control:before {
+div.details-control:before,
+td.details-control:before {
   content: "\f105";
+}
+
+td.details-control:before {
   padding: 8px;
 }
 
@@ -11179,6 +11184,7 @@ table.dataTable>tbody>tr.child ul.dtr-details>li:last-child {
   border-bottom: none;
 }
 
-table tbody tr.parent div.details-control {
+table tbody tr.parent div.details-control,
+.shown td.details-control {
   transform: rotate(90deg);
 }
