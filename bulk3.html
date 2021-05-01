@@ -655,6 +655,9 @@ https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
                 },
             }],
             drawCallback: function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                });
                 // If there is some more data
                 if ($('.load-more').is(':visible')) {
                     // Scroll to the "Load more" button
