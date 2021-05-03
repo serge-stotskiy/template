@@ -6591,7 +6591,8 @@ del {
 .ecommerce .fa-star.active {
   color: #f8ac59;
 }
-.ecommerce .note-editor {
+.ecommerce .note-editor,
+.admin-news .note-editor {
   border: 1px solid #e7eaec;
 }
 table.shoping-cart-table {
@@ -11187,4 +11188,27 @@ table.dataTable>tbody>tr.child ul.dtr-details>li:last-child {
 table tbody tr.parent div.details-control,
 .shown td.details-control {
   transform: rotate(90deg);
+}
+
+.btns-admin {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.btns-admin span {
+  margin-right: 15px;
+}
+
+.btns-admin .btn-active {
+  background: #2585C4;
+  color: #FFFFFF;
+}
+
+.btns-admin .btn {
+  margin-right: 5px;
+}
+
+.admin-news .tab-pane {
+  padding-left: 0;
+  padding-right: 0;
 }
