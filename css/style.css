@@ -9850,6 +9850,28 @@ body.md-skin {
     width: 100%;
     margin: 17px 5px 5px 8px;
   }
+  .dashboard  .navbar .right .alert.remind {
+    display: none;
+  }
+  .dashboard .navbar-right ~.alert.remind {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 0 15px 0 15px;
+    height: auto;
+  }
+  .dashboard .navbar .right-left {
+    margin-right: 0;
+  }
+  .dashboard .analytic-block {
+    -ms-flex-flow: unset;
+    flex-flow: unset;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+  }
 }
 @media (max-width: 350px) {
   .timeline-item .date {
@@ -10356,7 +10378,7 @@ body.md-skin {
 }
 
 .second .ibox-custom-footer {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .footable > thead > tr > th > span.footable-sort-indicator:before {
   content: "\e00f";
@@ -10403,12 +10425,12 @@ body.md-skin {
 }
 
 .dashboard .ibox {
-  border-top: 3px solid #E7EAEC;
+  border-top: 4px solid #E7EAEC;
   box-sizing: border-box;
 }
 
 .dashboard .ibox.ibox-banned {
-  border-top: 3px solid #ED5565;
+  border-top: 4px solid #ED5565;
 }
 
 .dashboard.payments .dataTables_wrapper {
@@ -10555,6 +10577,9 @@ body.md-skin {
 
 .tooltiptext {
   position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   left: 20px;
   top: -5px;
   visibility: hidden;
@@ -11136,18 +11161,13 @@ td.details-control:before {
   padding: 15px 90px 8px 15px;
 }
 
-.dashboard.dont-need-pay .ibox.second .ibox-custom-footer,
-.dashboard.banned .ibox.second .ibox-custom-footer {
-  margin-top: 28px;
-}
-
 .dashboard .third .ibox .ibox-content {
   padding-bottom: 24px;
 }
 
 .dashboard.dont-need-pay .third .ibox .ibox-content,
 .dashboard.banned .third .ibox .ibox-content {
-  padding-bottom: 44px;
+  padding-bottom: 25px;
 }
 
 .landing-page .no-check {
@@ -11211,4 +11231,141 @@ table tbody tr.parent div.details-control,
 .admin-news .tab-pane {
   padding-left: 0;
   padding-right: 0;
+}
+
+.btns-admin input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.btns-admin input[type="radio"] + label {
+  background: #E7EAEC;
+  margin-bottom: 0;
+}
+
+.btns-admin input[type="radio"]:checked + label {
+  background: #2585C4;
+  color: #FFFFFF;
+}
+
+.btn.btn-primary.cancel {
+  background: #E7EAEC;
+  color: #676A6C;
+  border: none;
+}
+
+.pagination {
+  padding-bottom: 25px;
+}
+
+.news-text {
+  height: 74px;
+  margin-bottom: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.last-news + .ibox-content {
+  min-height: 171px;
+}
+
+.second .div-text .min-width-plan div {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding-right: 20px;
+}
+
+.second .analytic-block p,
+.navbar .alert.remind p {
+  margin: 0;
+}
+
+.chart-settings .center {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.chart-settings .stat-list.progress-list {
+  width: 100%;
+}
+
+.third .ibox-data.text-muted {
+  margin-top: 19px;
+}
+
+.navbar .right .navbar-header {
+  position: absolute;
+  z-index: 1;
+}
+
+.navbar .alert.remind {
+  background: rgba(237, 85, 101, 1);
+  color: #FFFFFF;
+  height: 100%;
+  border: none;
+  border-radius: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 0 0 80px;
+  margin: 0;
+}
+
+.navbar .alert.remind button.close {
+  float: unset;
+  color: #FFFFFF;
+  opacity: 1;
+  text-shadow: none;
+}
+
+.navbar .alert.remind a {
+  color: #FFFFFF;
+  margin-right: 20px;
+}
+
+.navbar .right-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar-right ~ .alert.remind {
+  display: none;
+}
+
+@media (min-width: 1461px) {
+  .navbar .right {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1460px) {
+  .navbar .right {
+    width: calc(100% - 190px);
+  }
+}
+
+@media (max-width: 1150px) {
+  .navbar .right .alert.remind {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+  }
 }
