@@ -352,6 +352,8 @@ https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
 
 <script>
     $(document).ready(function (){
+        var $range = $("#ionrange_1");
+
         $('.i-checks').iCheck({
             checkboxClass: 'iradio_square-green',
         });
@@ -364,7 +366,7 @@ https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
             return '$' + n;
         }
 
-        $("#ionrange_1").ionRangeSlider({
+        $range.ionRangeSlider({
             skin: "big",
             min: 0,
             max: 100,
@@ -375,6 +377,11 @@ https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
             hide_from_to: true,
             prettify: my_prettify,
         });
+
+        $range.on("input", function (e) {
+            var handle = this.closest('.range').querySelector('.irs-handle');
+            handle.classList.toggle('active', e.target.value > 0)
+        })
     });
 </script>
 </body>

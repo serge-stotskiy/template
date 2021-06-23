@@ -11419,3 +11419,7 @@ table tbody tr.parent div.details-control,
 .settings .pricing-plan.border-green {
   border-top: 4px solid #1AB394;
 }
+
+.range .irs--big .irs-handle.active {
+  background: rgba(44, 143, 123, 1);
+}
