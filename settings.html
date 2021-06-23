@@ -17,6 +17,7 @@
     <link href="css/plugins/dropzone/basic.css" rel="stylesheet">
     <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
     <link href="css/plugins/intl-tel-input/intlTelInput.css" rel="stylesheet">
+    <link href="css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
     <!-- Table -->
     <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
@@ -110,7 +111,7 @@
                                                     <div class="product-main-price">
                                                         <div>
                                                             <span class="font-bold">$0.00005</span>
-                                                            <small class="text-muted">&nbsp;&nbsp;&nbsp;/&nbsp;per&nbsp;number</small>
+                                                            <small class="text">&nbsp;&nbsp;&nbsp;/&nbsp;per&nbsp;number</small>
                                                         </div>
                                                         <div class="float-right font-bold price">$25 minimum flat rate</div>
                                                     </div>
@@ -133,7 +134,7 @@
                                                     post facto</label></div>
                                             </li>
                                             <li>
-                                                <a class="btn btn-primary btn-xs inactive" href="#">Active Plan</a>
+                                                <a class="btn btn-primary btn-xs" href="#">Change to this</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -142,10 +143,10 @@
                             <div class="col-lg-6 wow zoomIn">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <ul class="pricing-plan list-unstyled">
+                                        <ul class="pricing-plan list-unstyled border-green">
                                             <li>
                                                 <h2 class="font-bold m-b-xs">
-                                                    Custom
+                                                    Post–payd
                                                 </h2>
                                                 <div class="m-t-md">
                                                     <div class="product-main-price">
@@ -170,7 +171,7 @@
                                                     <i></i>Payment of the bill post facto</label></div>
                                             </li>
                                             <li>
-                                                <a class="btn btn-primary btn-xs" href="#">Change to this</a>
+                                                <a class="btn btn-primary btn-xs inactive" href="#">Active Plan</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -275,6 +276,30 @@
                                                     <a href="#" class="password-control view"></a>
                                                 </div>
                                             </div>
+                                            <div class="hr-line-custom"></div>
+                                            <div class="form-group row">
+                                                <div class="col-lg-12">
+                                                <div class="i-check">
+                                                    <label> <input type="checkbox">
+                                                        <span>Send me an email with notification on low balance
+                                                        <sup class="tooltip-message">
+                                                            <i class="fa fa-question-circle"></i>
+                                                            <span class="tooltiptext">Text</span>
+                                                        </sup>
+                                                    </span>
+                                                    </label>
+                                                </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="row range">
+                                                        <label class="col-lg-5 col-form-label"><span>Balance notification
+                                                        threshold:</span></label>
+                                                        <div class="col-lg-7">
+                                                            <input id="ionrange_1"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="form-group row">
                                                 <div class="col-xl-5 col-lg-4">
                                                     <button class="btn btn-custom btn-primary" type="submit">Update data
@@ -316,6 +341,9 @@
 <!-- jQuery UI -->
 <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
 
+<!-- IonRangeSlider -->
+<script src="js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+
 <!--Show-more button plugin
 https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
 
@@ -326,6 +354,26 @@ https://www.gyrocode.com/articles/jquery-datatables-load-more-button/-->
     $(document).ready(function (){
         $('.i-checks').iCheck({
             checkboxClass: 'iradio_square-green',
+        });
+
+        $('.i-check').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+        });
+
+        function my_prettify (n) {
+            return '$' + n;
+        }
+
+        $("#ionrange_1").ionRangeSlider({
+            skin: "big",
+            min: 0,
+            max: 100,
+            step: 25,
+            prefix: "$",
+            grid: true,
+            hide_min_max: true,
+            hide_from_to: true,
+            prettify: my_prettify,
         });
     });
 </script>

@@ -8234,7 +8234,7 @@ body.landing-page {
 .landing-page .pricing-plan, .settings .pricing-plan {
   background: #FFFFFF;
   border: 1px solid #E7EAEC;
-  border-top: 3px solid #E7EAEC;
+  border-top: 4px solid #E7EAEC;
   box-sizing: border-box;
 }
 .landing-page .pricing-plan.selected {
@@ -9851,15 +9851,19 @@ body.md-skin {
     margin: 17px 5px 5px 8px;
   }
   .dashboard  .navbar .right .alert.remind {
-    display: none;
-  }
-  .dashboard .navbar-right ~.alert.remind {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
+    position: absolute;
+    top: 60px;
+    z-index: 10;
     padding: 0 15px 0 15px;
-    height: auto;
+    width: 100%;
+    height: 70px;
+    -ms-flex-align: start;
+    -ms-grid-row-align: flex-start;
+    align-items: flex-start;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .dashboard .navbar .right-left {
     margin-right: 0;
@@ -9959,6 +9963,7 @@ body.md-skin {
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
+  color: rgba(47, 64, 80, 1);
 }
 
 .settings .product-main-price small {
@@ -10059,6 +10064,7 @@ body.md-skin {
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
+  color: rgba(47, 64, 80, 1);
 }
 
 .landing-page .pricing-plan .m-b-xs,
@@ -11368,4 +11374,48 @@ table tbody tr.parent div.details-control,
     -ms-flex-pack: start;
     justify-content: start;
   }
+}
+
+.pricing-plan .font-bold,
+.settings .product-main-price small .text {
+  color: rgba(47, 64, 80, 1);
+}
+
+.row.range {
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+.range .irs-grid-pol {
+  display: none;
+}
+
+.range .irs--big .irs-handle {
+  top: 30px;
+  width: 18px;
+  height: 18px;
+  background: rgba(231, 234, 236, 1);
+  border: none;
+  box-shadow: none;
+
+}
+.range .irs--big .irs-line, .range .irs--big .irs-bar {
+  top: 38px;
+  height: 4px;
+  background: rgba(231, 234, 236, 1);
+  border: none;
+  width: auto !important;
+}
+
+.range .irs-grid-text {
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: #676A6C;
+}
+
+.landing-page .pricing-plan.border-green,
+.settings .pricing-plan.border-green {
+  border-top: 4px solid #1AB394;
 }
