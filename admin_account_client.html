@@ -37,7 +37,10 @@
                     <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-label">News</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">My account</span></a>
+                    <a href="#"><i class="fa fa-sliders"></i> <span class="nav-label">Setting plans</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cogs"></i> <span class="nav-label">Security</span></a>
                 </li>
             </ul>
         </div>
@@ -92,13 +95,27 @@
                                     <button class="btn btn-top btn–payd btn-active" type="button">Pre–payd</button>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <button class="btn btn-top btn–payd btn-banish" type="button">Post–payd</button>
+                                    <button class="btn btn-top btn–payd btn-success" type="button">Post–payd</button>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                     <div class="form-group">
                                         <label>Price per number</label>
-                                        <input class="touchspin" type="text" value="" name="demo1">
+                                        <input class="touchspin1" type="text" value="" name="demo1">
                                     </div>
+                                </div>
+                                <div class="offset-md-1 col-md-5">
+                                    <div class="form-group">
+                                        <label>Max allout credit, $</label>
+                                        <input class="touchspin2" type="text" value="" name="demo2">
+                                    </div>
+                                </div>
+                                <div class="col-md btns">
+                                    <span><strong>Issuing an invoice: </strong> </span>
+                                    <button class="btn btn-invoice btn-success" type="button">Every week</button>
+                                    <button class="btn btn-invoice btn-banish" type="button">Every 2 weeks</button>
+                                    <button class="btn btn-invoice btn-banish" type="button">Every mounth</button>
+                                </div>
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <button class="btn btn-primary btn-full-width" type="button">Save Settings
                                         </button>
@@ -207,12 +224,20 @@
     <script>
         $(document).ready(function () {
 
-            $(".touchspin").TouchSpin({
+            $(".touchspin1").TouchSpin({
                 buttondown_class: 'btn btn-white',
                 buttonup_class: 'btn btn-white',
-                initval: 0.002,
-                step: 0.001,
-                decimals: 3,
+                initval: 0.00002,
+                step: 0.00001,
+                decimals: 5,
+            });
+
+            $(".touchspin2").TouchSpin({
+                buttondown_class: 'btn btn-white',
+                buttonup_class: 'btn btn-white',
+                initval: 100,
+                step: 1,
+                decimals: 0,
             });
 
             var table = $('.dataTables-example').DataTable({

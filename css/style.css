@@ -9876,6 +9876,9 @@ body.md-skin {
     -ms-grid-row-align: center;
     align-items: center;
   }
+  .plan-settings .col-fix:nth-child(1) {
+    margin-right: 0;
+  }
 }
 @media (max-width: 350px) {
   .timeline-item .date {
@@ -10980,7 +10983,7 @@ Spinner animation
 }
 
 @media (min-width: 769px) and (max-width: 1920px) {
-  .admin .ibox.table-history, .admin .ibox.plan {
+  .admin .ibox.table-history, .admin .ibox.plan, .admin .ibox.plan-settings {
     min-width: 505px;
   }
 }
@@ -11048,16 +11051,21 @@ Spinner animation
   font-size: 13px;
 }
 
-.btn-status {
+.btn-status, .btn-invoice {
   padding: 0 8px;
+}
+
+.btn-status {
   width: 60px;
 }
 
-.plan .hr-line-custom {
+.plan .hr-line-custom,
+.plan-settings .hr-line-custom{
   margin: 0 -25px 15px;
 }
 
-.plan .ibox-content {
+.plan .ibox-content,
+.plan-settings .ibox-content {
   padding: 20px 25px 0 25px;
 }
 
@@ -11422,4 +11430,50 @@ table tbody tr.parent div.details-control,
 
 .range .irs--big .irs-handle.active {
   background: rgba(44, 143, 123, 1);
+}
+
+.touchspin1.form-control,
+.touchspin2.form-control,
+.touchspin3.form-control,
+.touchspin4.form-control {
+  text-align: center;
+}
+
+.plan .btn-full-width {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.fa.fa-sliders {
+  transform: rotate(270deg);
+}
+
+.plan-settings .ibox-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 25px;
+}
+
+.col-fix {
+  width: 505px;
+}
+
+.col-fix:nth-child(1) {
+  margin-right: 32px;
+}
+
+.ibox-touchspin .row {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+.col-fix .btn-custom {
+  margin-top: 10px;
 }
